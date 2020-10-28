@@ -54,5 +54,7 @@ class InteractiveRecord
   end 
   
   def self.find_by(attribute)
+    value = attribute.values.first 
+    formatted_value = value.class == Fixnum ? value : "'#{value}'"
     
 end
